@@ -1,0 +1,59 @@
+doctype html
+html(class='no-js', lang='ro')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        title
+        meta(name='description', content='')
+        meta(name="viewport", content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0")
+        link(href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css')
+        link(rel='stylesheet', href='css/normalize.css')
+        link(rel='stylesheet', href='css/skeleton.css')
+        link(rel='stylesheet', href='css/layout.css')
+        link(rel='stylesheet', href='css/main.css')
+        link(rel='stylesheet', href='css/app.css')
+        script window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
+        script(src='js/vendor/modernizr-2.6.2.min.js')
+    body
+        .container
+            #logo
+                span calculator tarife curierat
+            form.nine.columns.offset-by-four(id="sendInfo")
+                fieldset.nine.columns
+                    .label.plic.four.columns Ce expediezi?
+                    input.css-checkbox(id="plic",type="radio",name='ceanume',value='plic',checked)
+                    label.css-label.two.columns(for="plic") Plic
+                    input.css-checkbox(id="colet",type="radio",name='ceanume',value='colet')
+                    label.css-label.two.columns(for="colet") Colet
+                fieldset.fldgreutate.nine.columns.hidden
+                    .label.greutate.four.columns Ce greutate are coletul?
+                    input.four.columns(id="greutate",name="greutate",type="number",pattern="[-+]?[0-9]*[.,]?[0-9]+",placeholder="kilograme")
+                fieldset.flddimensiuni.nine.columns.hidden
+                    .label.dimensiuni.four.columns Dimensiunile coletului cm<sup>3</sup> ?
+                    .four.columns
+                        input.dim(id="lungime",name="latime",type="number",pattern="[-+]?[0-9]*[.,]?[0-9]+",placeholder="L")
+                        input.dim(id="latime",name="latime",type="number",pattern="[-+]?[0-9]*[.,]?[0-9]+",placeholder="l")
+                        input.dim(id="inaltime",name="inaltime",type="number",pattern="[-+]?[0-9]*[.,]?[0-9]+",placeholder="h")
+                fieldset.nine.columns
+                    .label.asigurare.four.columns Asigurare pentru expediție?
+                    input.four.columns(id="asigurare",name="asigurare",type="number",pattern="[-+]?[0-9]*[.,]?[0-9]+",placeholder="valoarea în lei")
+                fieldset.nine.columns
+                    .label.rambursval.four.columns Valoare ramburs? (opțional)
+                    input.four.columns(id="rambursval",name="rambursval",type="number",pattern="[-+]?[0-9]*[.,]?[0-9]+",placeholder="valoarea în lei")
+                fieldset.nine.columns
+                    input.css-checkbox(id="confirmare",type="checkbox",name='confirmare',value="1")
+                    label.css-label.four.columns.offset-by-two(for="confirmare") Confirmare de livrare?
+                    input.css-checkbox(id="returdoc",type="checkbox",name='returdoc',value="1")
+                    label.css-label.four.columns(for="returdoc") Retur documente?
+
+
+    script(src='js/main.js')
+    script(src='js/plugins.js')
+        script(src='js/main.js')
+        script.
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
