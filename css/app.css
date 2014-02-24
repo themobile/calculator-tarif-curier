@@ -1,0 +1,208 @@
+@font-face {
+  font-family: 'ctc';
+  src: url('../fonts/ctc.eot?kp6r30');
+  src: url('../fonts/ctc.eot?#iefixkp6r30') format('embedded-opentype'), url('../fonts/ctc.woff?kp6r30') format('woff'), url('../fonts/ctc.ttf?kp6r30') format('truetype'), url('../fonts/ctc.svg?kp6r30#ctc') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'ctc';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-facebook:before {
+  content: "\e600";
+}
+.icon-ok:before {
+  content: "\e601";
+}
+.icon-remove:before {
+  content: "\e602";
+}
+.icon-comment-alt2-stroke:before {
+  content: "\e603";
+}
+.icon-checkmark:before {
+  content: "\e604";
+}
+.icon-x:before {
+  content: "\e605";
+}
+.icon-facebook2:before {
+  content: "\e606";
+}
+.icon-google-plus:before {
+  content: "\e607";
+}
+.icon-envelope:before {
+  content: "\e608";
+}
+.icon-wrench:before {
+  content: "\e609";
+}
+.icon-gift:before {
+  content: "\e60a";
+}
+.icon-coin:before {
+  content: "\e60b";
+}
+.icon-cart:before {
+  content: "\e60c";
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+#logo {
+  background: url('../img/logo.png') no-repeat center center;
+  height: 70px;
+  margin: 2em 0;
+}
+#logo > span {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-top: 75px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+input[type=address],
+input[type=text],
+input[type=tel],
+input[type=email],
+select,
+input[type=number] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid lightgrey;
+  box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.1);
+  line-height: 2em;
+  padding: 0.5em;
+  box-sizing: border-box;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  outline: none;
+  font-size: 1em;
+  color: black;
+  font-family: 'Open Sans';
+  font-weight: 300;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+input[type=radio].css-checkbox,
+input[type=checkbox].css-checkbox {
+  display: none;
+}
+input[type=radio].css-checkbox + label.css-label,
+input[type=checkbox].css-checkbox + label.css-label {
+  display: inline-block;
+  line-height: 2em;
+  padding: 0.5em 0;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  font-weight: 300;
+}
+input[type=radio].css-checkbox + label.css-label::before,
+input[type=checkbox].css-checkbox + label.css-label::before {
+  font-size: 0.8em;
+  font-family: 'ctc';
+  color: #ed1e79;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: '\e605\00A0';
+}
+input[type=radio].css-checkbox:checked + label.css-label,
+input[type=checkbox].css-checkbox:checked + label.css-label {
+  color: dark;
+}
+input[type=radio].css-checkbox:checked + label.css-label::before,
+input[type=checkbox].css-checkbox:checked + label.css-label::before {
+  font-size: 0.8em;
+  font-family: 'ctc';
+  color: #ed1e79;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: '\e601\00A0';
+}
+label.css-label {
+  color: rgba(0, 0, 0, 0.7);
+  display: table-cell;
+  vertical-align: middle;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.label {
+  text-align: left;
+  font-weight: 300;
+  line-height: 2em;
+  font-size: 1em;
+  color: rgba(0, 0, 0, 0.7);
+  padding: 0.5em 0;
+}
+.label::before {
+  font-size: 0.8em;
+  font-family: 'ctc';
+  color: #ed1e79;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+fieldset {
+  margin-top: 1em;
+  border-top: 1px solid rgba(237, 30, 121, 0.2);
+  padding-top: 1em;
+}
+.dim {
+  width: 31%;
+  margin-left: 3.5%;
+}
+.dim:first-of-type {
+  margin-left: 0;
+}
+.plic::before {
+  content: '\e608\00A0';
+}
+.greutate::before {
+  content: '\e609\00A0';
+}
+.dimensiuni::before {
+  content: '\e60c\00A0';
+}
+.asigurare::before {
+  content: '\e60a\00A0';
+}
+.rambursval::before {
+  content: '\e60b\00A0';
+}
