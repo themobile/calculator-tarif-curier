@@ -11,7 +11,7 @@ moment.lang('ro', {
 var crypto = require('crypto');
 var Buffer = require('buffer').Buffer;
 var isProduction = Parse.applicationId == "$$$$%%%$$$####";
-var CTCVersion = '0.3.240';
+var CTCVersion = '0.4.55';
 var StringBuffer = function () {
     this.buffer = [];
 };

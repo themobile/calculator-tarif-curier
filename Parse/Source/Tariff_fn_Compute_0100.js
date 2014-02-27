@@ -1,4 +1,4 @@
-Parse.Cloud.define("ComputeTariff", function (request, response) {
+Parse.Cloud.define("ComputeTariff_0100", function (request, response) {
     Parse.Cloud.useMasterKey();
     var colet = request.params.colet            // 0=plic; 1=colet
         , loco = request.params.loco            // 0=national; 1=loco
