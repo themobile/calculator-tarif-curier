@@ -5,10 +5,6 @@ Parse.Cloud.job("CreateApplication", function (request, status) {
         return Parse.Promise.as();
     }).then(function () {
             return _createSchema();
-//        }).then(function () {
-//            return _createQuestionType();
-//        }).then(function () {
-//            return _createQuestionCategory();
         }).then(function () {
             status.success("OK");
         }, function (error) {
@@ -112,6 +108,48 @@ var CTCSchema = {
                 {
                     name: "tableName", type: "string"
                 }
+            ]
+        },
+        {
+            name: "Tariff",
+            columns: [
+                {name: "name", type: "string"},
+                {name: "isDeleted", type: "boolean"},
+                {name: "tva", type: "money"},
+                {name: "IndiceCombustibil", type: "money"},
+                {name: "IndiceCombustibilAditionale", type: "money"},
+                {name: "ConditieMinKg", type: "money"},
+                {name: "ConditieMaxKg", type: "money"},
+                {name: "PlicMax1KgLoco", type: "money"},
+                {name: "ColetPrimulKgLoco", type: "money"},
+                {name: "ColetPrimele10KgLoco", type: "money"},
+                {name: "ColetKgSuplimentarLoco", type: "money"},
+                {name: "PlicMax1KgNational", type: "money"},
+                {name: "ColetPrimulKgNational", type: "money"},
+                {name: "ColetKgSuplimentarNational", type: "money"},
+                {name: "KmExterioriNational", type: "money"},
+                {name: "DeservireSpecialaNational", type: "money"},
+                {name: "Asigurare", type: "money"},
+                {name: "RambursFix", type: "money"},
+                {name: "RambursVariabil", type: "money"},
+                {name: "RambursDocumenteFixLoco", type: "money"},
+                {name: "RambursDocumenteVariabilLoco", type: "money"},
+                {name: "RambursDocumenteFixNational", type: "money"},
+                {name: "RambursDocumenteVariabilNational", type: "money"},
+                {name: "RambursNumerarFixLoco", type: "money"},
+                {name: "RambursNumerarFixNational", type: "money"},
+                {name: "ReturDocumente", type: "money"},
+                {name: "ReturDocumenteLoco", type: "money"},
+                {name: "ReturDocumenteVariabil", type: "money"},
+                {name: "ConfirmareLivrare", type: "money"},
+                {name: "ConfirmareLivrareLoco", type: "money"},
+                {name: "InfoNumeServiciuCurierat", type: "string"},
+                {name: "InfoNumarLocalitatiRetea", type: "string"},
+                {name: "InfoKgMaxColet", type: "string"},
+                {name: "InfoCmMaxColet", type: "string"},
+                {name: "Telefon", type: "sting"},
+                {name: "Url", type: "string"},
+                {name: "UrlComanda", type: "string"}
             ]
         }
     ]
