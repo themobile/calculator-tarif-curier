@@ -3,57 +3,128 @@ html(class='no-js', lang='ro')
     head
         meta(charset='utf-8')
         meta(http-equiv='X-UA-Compatible', content='IE=edge')
-        title
-        meta(name='description', content='')
+        title Calculator comparativ tarife servicii curierat
+        meta(name='description', content='Calculator comparativ de tarife servicii de curierat în România, fără pretenția de exhaustiv, cu accent pe simplitatea utilizării.')
         meta(name="viewport", content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0")
-        link(href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css')
+
+        meta(property="og:title", content="Calculator comparativ tarife servicii curierat")
+        meta(property="og:description",content="Calculator comparativ de tarife servicii de curierat în România, fără pretenția de exhaustiv, cu accent pe simplitatea utilizării.")
+        meta(property="og:image", content="http://calculator-tarif-curierat.ro/img/facebook-image.jpg")
+        meta(property="og:url", content="http://calculator-tarif-curierat.ro")
+        meta(property="og:site_name", content="Calculator tarife curierat")
+        meta(property="og:type", content="website")
+        meta(property="fb:app_id", content="233070803546492")
+
+        link(href='http://fonts.googleapis.com/css?family=Open+Sans:300,600&subset=latin,latin-ext' rel='stylesheet' type='text/css')
         link(rel='stylesheet', href='css/normalize.css')
         link(rel='stylesheet', href='css/skeleton.css')
-        link(rel='stylesheet', href='css/layout.css')
-        link(rel='stylesheet', href='css/main.css')
         link(rel='stylesheet', href='css/app.css')
+        link(rel="shortcut icon",href="img/favicon.ico", type="image/x-icon")
+        link(rel="icon", href="img/favicon.ico", type="image/x-icon")
+        link(rel="apple-touch-icon", href="img/apple-touch-icon-precomposed.png")
         script window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
         script(src='js/vendor/modernizr-2.6.2.min.js')
     body
-        .container
+
+        .container(itemscope,itemtype="http://schema.org/Product")
             #logo
-                span calculator tarife curierat
-            form.nine.columns.offset-by-four(id="sendInfo")
-                fieldset.nine.columns
-                    .label.plic.four.columns Ce expediezi?
-                    input.css-checkbox(id="plic",type="radio",name='ceanume',value='plic',checked)
-                    label.css-label.two.columns(for="plic") Plic
-                    input.css-checkbox(id="colet",type="radio",name='ceanume',value='colet')
-                    label.css-label.two.columns(for="colet") Colet
-                fieldset.fldgreutate.nine.columns.hidden
-                    .label.greutate.four.columns Ce greutate are coletul?
-                    input.four.columns(id="greutate",name="greutate",type="number",pattern="[-+]?[0-9]*[.,]?[0-9]+",placeholder="kilograme")
-                fieldset.flddimensiuni.nine.columns.hidden
-                    .label.dimensiuni.four.columns Dimensiunile coletului cm<sup>3</sup> ?
-                    .four.columns
-                        input.dim(id="lungime",name="latime",type="number",pattern="[-+]?[0-9]*[.,]?[0-9]+",placeholder="L")
-                        input.dim(id="latime",name="latime",type="number",pattern="[-+]?[0-9]*[.,]?[0-9]+",placeholder="l")
-                        input.dim(id="inaltime",name="inaltime",type="number",pattern="[-+]?[0-9]*[.,]?[0-9]+",placeholder="h")
-                fieldset.nine.columns
-                    .label.asigurare.four.columns Asigurare pentru expediție?
-                    input.four.columns(id="asigurare",name="asigurare",type="number",pattern="[-+]?[0-9]*[.,]?[0-9]+",placeholder="valoarea în lei")
-                fieldset.nine.columns
-                    .label.rambursval.four.columns Valoare ramburs? (opțional)
-                    input.four.columns(id="rambursval",name="rambursval",type="number",pattern="[-+]?[0-9]*[.,]?[0-9]+",placeholder="valoarea în lei")
-                fieldset.nine.columns
-                    input.css-checkbox(id="confirmare",type="checkbox",name='confirmare',value="1")
-                    label.css-label.four.columns.offset-by-two(for="confirmare") Confirmare de livrare?
-                    input.css-checkbox(id="returdoc",type="checkbox",name='returdoc',value="1")
-                    label.css-label.four.columns(for="returdoc") Retur documente?
+                h1(itemprop="name") calculator tarife curierat
+                .fb-like(data-href="http://calculator-tarif-curierat.ro", data-layout="button_count", data-action="like", data-show-faces="true", data-share="true")
+
+            form.ten.columns.offset-by-three(id="sendinfo")
+                .label.intro.ten.columns Vrei să trimiți prin curier ceva? Completează mai jos și afli tarifele de bază ale curierilor din România!
+                .hiding-net
+                    fieldset.ten.columns
+                        .label.plic.five.columns Ce expediezi?
+                        input.css-checkbox(id="plic",type="radio",name='colet',value='0',checked)
+                        label.css-label.two.columns(for="plic") Plic
+                        input.css-checkbox(id="colet",type="radio",name='colet',value='1')
+                        label.css-label.two.columns(for="colet") Colet
+                    fieldset.fldgreutate.ten.columns
+                        .label.greutate.five.columns Ce greutate are coletul?
+                        input.four.columns(id="greutate",name="greutate",type="number",pattern="[-+]?[0-9]*[.,]?[0-9]+",placeholder="kilograme")
+                    fieldset.flddimensiuni.ten.columns
+                        .label.dimensiuni.five.columns Dimensiunile coletului (cm) ?
+                        .four.columns
+                            input.dim(id="lungime",name="lungime",type="number",pattern="[-+]?[0-9]*[.,]?[0-9]+",placeholder="L")
+                            input.dim(id="latime",name="latime",type="number",pattern="[-+]?[0-9]*[.,]?[0-9]+",placeholder="l")
+                            input.dim(id="inaltime",name="inaltime",type="number",pattern="[-+]?[0-9]*[.,]?[0-9]+",placeholder="h")
+
+                    fieldset.ten.columns
+                        .label.unde.five.columns Unde expediezi?
+                        input.css-checkbox(id="loco",type="radio",name='loco',value='1',checked)
+                        label.css-label.two.columns(for="loco") Loco
+                        input.css-checkbox(id="national",type="radio",name='loco',value='0')
+                        label.css-label.two.columns(for="national") Național
+                    fieldset.ten.columns
+                        .label.asigurare.five.columns Asigurare pentru expediție?
+                        input.four.columns(id="asigurare",name="asigurare",type="number",pattern="[-+]?[0-9]*[.,]?[0-9]+",placeholder="valoarea în lei")
+                    fieldset.ten.columns
+                        .label.rambursval.five.columns Valoare ramburs? (opțional)
+                        input.four.columns(id="rambursval",name="rambursval",type="number",pattern="[-+]?[0-9]*[.,]?[0-9]+",placeholder="valoarea în lei")
+                    fieldset.ten.columns
+                        input.css-checkbox(id="confirmare",type="checkbox",name='confirmare',value="1")
+                        label.css-label.five.columns.offset-by-two(for="confirmare") Confirmare de livrare?
+                        input.css-checkbox(id="returdoc",type="checkbox",name='returdoc',value="1")
+                        label.css-label.four.columns(for="returdoc") Retur documente?
+                        input.lamisto(type="text",name="lamisto")
+                button#process.ten.columns(type='submit',name='submit',value='submit') Calculează!
+                .bubblingG.hidden.one.column.offset-by-five
+                    span#bubblingG_1
+                    span#bubblingG_2
+                    span#bubblingG_3
 
 
-    script(src='js/main.js')
-    script(src='js/plugins.js')
+            #results.ten.columns.offset-by-three
+
+            #footer
+                .text-container.sixteen.columns.menu-bottom.container <a id="disclaimer-link" href="">lucruri bune de știut</a> |  &copy; 2014 | designed by <a href="http://themobile.ro" title="programare web si aplicatii mobile">themobile.ro</a>
+
+
+            #disclaimer.fifteen.columns.offset-by-one
+                .close-sign
+                .body.thirteen.columns
+                    h2 Calculator prețuri de curierat
+                    p Am dezvoltat acest site într-o singură seară, dintr-o joacă. Nu am intenționat să fie un calculator exhaustiv de tarife servicii de curierat, ci mai degrabă un indicator al costurilor aferente acestor servicii. Toate datele utilizate sunt cele publicate pe site-urile firmelor de profil. Nu am inclus toate categoriile de servicii, ci am optat pentru cele de bază (standard), tocmai pentru că multitudinea de opțiuni oferite de fiecare firmă ar fi fost dificil de adus la un numitor comun. Vom integra, pe viitor, și tarifele altor firme de curierat, în măsura timpului disponibil.
+                    p Nu am figurat în calculatorul de tarife punctul de plecare și destinația coletelor pentru că, pe de o parte, tarifele fiecărei firme sunt fixe, indiferent de destinație, iar acolo unde firmele percep tarife suplimentare pe km, există firme care fac public acest tarif și altele nu. Pentru detalii exacte legate de serviciile fiecărei firme, vă rugăm să vă adresați direct lor, fie folosind link-urile aferente, fie sunându-i sau scriindu-le un email.
+                    p Nu avem și nu vom avea niciun fel de legătură cu vreo firmă de curierat anume, clasamentul întocmit fiind unul rezultat din prețurile public afișate pe site-urile companiilor de curierat. Te rugăm să folosești acest calculator de tarife ca o indicație, nu răspundem pentru exactitatea celor afișate și nu putem fi făcuți 'vinovați' de eventuale inadvertențe / inexactități.
+                    p Una peste alta, ar fi chiar cool pentru noi ca tu să folosește <b>butonul de like / share</b>. Dar doar atunci când ai constatat că inițiativa noastră e utilă pentru tine.
+
+            script(async, src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js")
+            ins.adsbygoogle(style="display:inline-block;width:320px;height:50px",data-ad-client="ca-pub-0892998931805418",data-ad-slot="4503902523")
+            script.
+                (adsbygoogle = window.adsbygoogle || []).push({});
+
+
+            #facebook-comments
+                .fb-comments.ten.columns.offset-by-three(data-href="http://calculator-tarif-curierat.ro", data-numposts="10", data-colorscheme="light")
+
+            span(itemprop="brand", itemscope, itemtype="http://schema.org/Brand")
+                meta(itemprop="logo", content="http://calculator-tarif-curierat.ro/img/logo.png")
+
         script(src='js/main.js')
+
+
+
+
+        #fb-root
         script.
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
+            (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/ro_RO/all.js#xfbml=1&appId=233070803546492";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+
+
+        script.
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-12425528-23', 'calculator-tarif-curier.ro');
+            ga('send', 'pageview');
+
+
+

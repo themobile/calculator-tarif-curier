@@ -1,5 +1,5 @@
 //vars
-@accentcolor:#ED1E79;
+@accentcolor: #ED1E79;
 
 @font-face {
   font-family: 'ctc';
@@ -22,64 +22,267 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+//
+//.icon-facebook:before {
+//  content: "\e600";
+//}
+//
+//.icon-ok:before {
+//  content: "\e601";
+//}
+//
+//.icon-remove:before {
+//  content: "\e602";
+//}
+//
+//.icon-comment-alt2-stroke:before {
+//  content: "\e603";
+//}
+//
+//.icon-checkmark:before {
+//  content: "\e604";
+//}
+//
+//.icon-x:before {
+//  content: "\e605";
+//}
+//
+//.icon-facebook2:before {
+//  content: "\e606";
+//}
+//
+//.icon-google-plus:before {
+//  content: "\e607";
+//}
+//
+//.icon-envelope:before {
+//  content: "\e608";
+//}
+//
+//.icon-wrench:before {
+//  content: "\e609";
+//}
+//
+//.icon-gift:before {
+//  content: "\e60a";
+//}
+//
+//.icon-coin:before {
+//  content: "\e60b";
+//}
+//
+//.icon-cart:before {
+//  content: "\e60c";
+//}
+//
+//.icon-earth:before {
+//  content: "\e60d";
+//}
+//
+//.icon-arrow-down:before {
+//  content: "\e60e";
+//}
+//
+//.icon-arrow-up:before {
+//  content: "\e60f";
+//}
 
-.icon-facebook:before {
-  content: "\e600";
-}
-.icon-ok:before {
-  content: "\e601";
-}
-.icon-remove:before {
-  content: "\e602";
-}
-.icon-comment-alt2-stroke:before {
-  content: "\e603";
-}
-.icon-checkmark:before {
-  content: "\e604";
-}
-.icon-x:before {
-  content: "\e605";
-}
-.icon-facebook2:before {
-  content: "\e606";
-}
-.icon-google-plus:before {
-  content: "\e607";
-}
-.icon-envelope:before {
-  content: "\e608";
-}
-.icon-wrench:before {
-  content: "\e609";
-}
-.icon-gift:before {
-  content: "\e60a";
-}
-.icon-coin:before {
-  content: "\e60b";
-}
-.icon-cart:before {
-  content: "\e60c";
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
 }
 
+html {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
 
 
 body {
-  font-family:'Open Sans',sans-serif;
-  font-size:14px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+a {
+  color: @accentcolor;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+textarea:focus, input:focus {
+  outline: 0;
 }
 
 #logo {
-  background:url('../img/logo.png') no-repeat center center;
+  background: url('../img/logo.png') no-repeat center center;
   height: 70px;
-  margin: 2em 0;
+  margin: 2em 0 3em 0;
 
-  > span {
+  > h1 {
     display: block;
     width: 100%;
     text-align: center;
     padding-top: 75px;
+    font-size: 1em;
     font-weight: 600;
     text-transform: uppercase;
   }
@@ -94,6 +297,7 @@ input[type=address], input[type=text], input[type=tel], input[type=email], selec
   line-height: 2em;
   padding: 0.5em;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
   border-radius: 0;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
@@ -103,13 +307,7 @@ input[type=address], input[type=text], input[type=tel], input[type=email], selec
   font-family: 'Open Sans';
   font-weight: 300;
 
-  &:invalid {
-    //      background-color: rgba(164, 192, 53, 0.07);
-  }
 
-  &:required {
-    //      border: 1px solid darkturquoise;
-  }
 
 }
 
@@ -117,13 +315,11 @@ input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 
-
-
-input[type=radio].css-checkbox,input[type=checkbox].css-checkbox {
+input[type=radio].css-checkbox, input[type=checkbox].css-checkbox {
   display: none;
 }
 
-input[type=radio].css-checkbox + label.css-label,input[type=checkbox].css-checkbox + label.css-label {
+input[type=radio].css-checkbox + label.css-label, input[type=checkbox].css-checkbox + label.css-label {
   display: inline-block;
   line-height: 2em;
   padding: 0.5em 0;
@@ -131,7 +327,7 @@ input[type=radio].css-checkbox + label.css-label,input[type=checkbox].css-checkb
   background-position: 0 0;
   vertical-align: middle;
   cursor: pointer;
-  font-weight: 300;
+  //  font-weight: 300;
 
   &::before {
     font-size: 0.8em;
@@ -149,8 +345,7 @@ input[type=radio].css-checkbox + label.css-label,input[type=checkbox].css-checkb
   }
 }
 
-input[type=radio].css-checkbox:checked + label.css-label,input[type=checkbox].css-checkbox:checked + label.css-label {
-  color: dark;
+input[type=radio].css-checkbox:checked + label.css-label, input[type=checkbox].css-checkbox:checked + label.css-label {
   &::before {
     font-size: 0.8em;
     font-family: 'ctc';
@@ -179,13 +374,12 @@ label.css-label {
 
 }
 
-
 .label {
   text-align: left;
-  font-weight: 300;
+  font-weight: 600;
   line-height: 2em;
   font-size: 1em;
-  color: rgba(0,0,0,0.7);
+  color: rgba(0, 0, 0, 0.7);
   padding: 0.5em 0;
 
   &::before {
@@ -206,20 +400,45 @@ label.css-label {
 
 fieldset {
   margin-top: 1em;
-  border-top: 1px solid fadeout(@accentcolor,80%);
-  padding-top: 1em;
+  border-bottom: 1px solid rgba(237, 30, 121, 0.2);
+  padding-bottom: 1em;
 }
+
+form {
+  margin-top: 2em !important;
+}
+
+#results {
+  text-align: center;
+}
+
+.gotohome {
+  width: 100%;
+
+  border: none;
+  background: @accentcolor;
+  line-height: 2em;
+  margin: 2em 0 1em;
+  color: white;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 1.2em;
+  position: relative;
+  outline: none;
+}
+
 
 
 .dim {
   width: 31%;
   margin-left: 3.5%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
 
   &:first-of-type {
-    margin-left:0;
+    margin-left: 0;
   }
 }
-
 
 .plic {
   &::before {
@@ -227,13 +446,11 @@ fieldset {
   }
 }
 
-
 .greutate {
   &::before {
     content: '\e609\00A0';
   }
 }
-
 
 .dimensiuni {
   &::before {
@@ -251,4 +468,355 @@ fieldset {
   &::before {
     content: '\e60b\00A0';
   }
+}
+
+.unde {
+  &::before {
+    content: '\e60d\00A0';
+  }
+}
+
+label[for=plic], label[for=colet], label[for=loco], label[for=national] {
+  max-width: 48%;
+}
+
+label[for=confirmare], label[for=returdoc] {
+  font-weight: 600;
+}
+
+#process {
+  border: none;
+  background: @accentcolor;
+  line-height: 2em;
+  margin: 2em 0 1em 10px;
+  color: white;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 1.5em;
+  position: relative;
+  outline: none;
+}
+
+#footer {
+  border-top: 1px solid fadeout(@accentcolor, 80%);
+  margin: 2em 0 0 0;
+  text-align: center;
+  display:inline-block;
+
+  .text-container {
+    padding: 1em 0;
+  }
+}
+
+#disclaimer {
+  display: block;
+  position: absolute;
+  background: lighten(@accentcolor, 45%);
+  bottom: 0;
+  margin-left:10px;
+  z-index: 9;
+  display:none;
+
+  > .body {
+    padding: 1em;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+    > h2 {
+      font-size: 1.2em;
+    }
+
+    > p {
+      font-size: 0.9em;
+    }
+  }
+
+  > .close-sign {
+
+    &:before {
+      content: '\e605';
+      font-size: 1.5em;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      color: black;
+      font-family: 'ctc';
+    }
+
+    &:hover {
+      &:before {
+        color: @accentcolor;
+      }
+    }
+
+  }
+}
+
+.curier {
+  //  border-bottom: 1px solid fadeout(@accentcolor, 80%);
+  padding: 1em 0;
+  text-align: right;
+
+  .curier_expl {
+    text-transform: uppercase;
+    font-size: 0.8em;
+  }
+
+  .curier_place {
+    position: absolute;
+    font-size: 4em;
+    margin-top: 0.4em;
+    color: rgba(0, 0, 0, 0.12);
+    font-weight: 300;
+
+    > sup {
+      font-size: 0.5em;
+    }
+  }
+
+  .curier_name {
+    background: desaturate(darken(@accentcolor,10%),10%);
+    font-weight: 600;
+    color: white;
+    line-height: 2em;
+
+    > span.arrow-down:after {
+      content: '\e60e';
+      margin-left: 10px;
+      top: 10px;
+      color: white;
+      display: inline-block;
+      text-decoration: none;
+      font-family: 'ctc';
+    }
+
+    > span.arrow-up:after {
+      content: '\e60f';
+      margin-left: 10px;
+      top: 10px;
+      color: white;
+      display: inline-block;
+      font-family: 'ctc';
+      text-decoration: none;
+    }
+
+  }
+
+  > div {
+    overflow: hidden;
+    margin-top: 0.5em;
+  }
+
+  > div span {
+    width: 60%;
+    float: right;
+    text-align: center;
+    padding-left: 2em;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+
+  }
+
+}
+
+div.curier_name > span {
+  text-decoration: underline;
+}
+
+#results > div.curier.top.ten.columns {
+  padding: 0;
+  margin-bottom: -1em;
+}
+
+.intro {
+  line-height: 1.2em;
+  text-align: center;
+  font-weight: 600;
+  color: @accentcolor;
+  border-bottom: 1px solid fadeout(@accentcolor, 80%);
+}
+
+#facebook-comments {
+  margin: 2em 0 2em 10px;
+  display:table;
+  position:relative;
+
+  .fb-comments {
+
+    > span {
+      width: 100% !important;
+
+      > iframe {
+        width: 100% !important;
+
+      }
+    }
+
+  }
+
+}
+
+
+.fb-like {
+  text-align: center;
+  width: 100%;
+}
+
+.adsbygoogle {
+  display: block;
+  width: 320px;
+  height: 50px;
+  margin-top: 1em;
+  position: relative;
+  left: 50%;
+  margin-left: -160px;
+  margin-bottom: 2em;
+}
+
+.lamisto {
+  display:none;
+}
+
+//loader
+
+.bubblingG {
+  text-align: center;
+  width: 40px !important;
+  height: 0;
+  position: relative;
+  display: block;
+  right: 40px;
+  margin-top: -10px;
+}
+
+.bubblingG span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 5px;
+  height: 5px;
+  margin: 13px auto;
+
+  background: #ED1E79;
+  -moz-border-radius: 25px;
+  -moz-animation: bubblingG 0.8s infinite alternate;
+  -webkit-border-radius: 25px;
+  -webkit-animation: bubblingG 0.8s infinite alternate;
+  -ms-border-radius: 25px;
+  -ms-animation: bubblingG 0.8s infinite alternate;
+  -o-border-radius: 25px;
+  -o-animation: bubblingG 0.8s infinite alternate;
+  border-radius: 25px;
+  animation: bubblingG 0.8s infinite alternate;
+}
+
+#bubblingG_1 {
+  -moz-animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+  -ms-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+#bubblingG_2 {
+  -moz-animation-delay: 0.24s;
+  -webkit-animation-delay: 0.24s;
+  -ms-animation-delay: 0.24s;
+  -o-animation-delay: 0.24s;
+  animation-delay: 0.24s;
+}
+
+#bubblingG_3 {
+  -moz-animation-delay: 0.48s;
+  -webkit-animation-delay: 0.48s;
+  -ms-animation-delay: 0.48s;
+  -o-animation-delay: 0.48s;
+  animation-delay: 0.48s;
+}
+
+@-moz-keyframes bubblingG {
+  0% {
+    width: 5px;
+    height: 5px;
+    background-color: #ED1E79;
+    -moz-transform: translateY(0);
+  }
+
+  100% {
+    width: 12px;
+    height: 12px;
+    background-color: #FFFFFF;
+    -moz-transform: translateY(-11px);
+  }
+
+}
+
+@-webkit-keyframes bubblingG {
+  0% {
+    width: 5px;
+    height: 5px;
+    background-color: #ED1E79;
+    -webkit-transform: translateY(0);
+  }
+
+  100% {
+    width: 12px;
+    height: 12px;
+    background-color: #FFFFFF;
+    -webkit-transform: translateY(-11px);
+  }
+
+}
+
+@-ms-keyframes bubblingG {
+  0% {
+    width: 5px;
+    height: 5px;
+    background-color: #ED1E79;
+    -ms-transform: translateY(0);
+  }
+
+  100% {
+    width: 12px;
+    height: 12px;
+    background-color: #FFFFFF;
+    -ms-transform: translateY(-11px);
+  }
+
+}
+
+@-o-keyframes bubblingG {
+  0% {
+    width: 5px;
+    height: 5px;
+    background-color: #ED1E79;
+    -o-transform: translateY(0);
+  }
+
+  100% {
+    width: 12px;
+    height: 12px;
+    background-color: #FFFFFF;
+    -o-transform: translateY(-11px);
+  }
+
+}
+
+@keyframes bubblingG {
+  0% {
+    width: 5px;
+    height: 5px;
+    background-color: #ED1E79;
+    transform: translateY(0);
+  }
+
+  100% {
+    width: 12px;
+    height: 12px;
+    background-color: #FFFFFF;
+    transform: translateY(-11px);
+  }
+
 }
