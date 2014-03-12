@@ -11,7 +11,7 @@ moment.lang('ro', {
 var crypto = require('crypto');
 var Buffer = require('buffer').Buffer;
 var isProduction = Parse.applicationId == "$$$$%%%$$$####";
-var CTCVersion = '0.3.240';
+var CTCVersion = '0.4.55';
 var StringBuffer = function () {
     this.buffer = [];
 };
@@ -39,6 +39,18 @@ var escapeHtml = function (text) {
     }
 
     return text
+};
+
+NZN = function (number) {
+    if (!(number)) {
+        return 0;
+    } else {
+        return number;
+    }
+};
+
+_ctcRound = function (number, decimals) {
+    return Math.round(number * Math.pow(10, decimals)) / Math.pow(10, decimals);
 };
 
 _getAdminACL = function () {
@@ -457,11 +469,10 @@ Parse.Cloud.define("test2", function (request, response) {
 });
 
 Parse.Cloud.define("test3", function (request, response) {
-    var userId = request.user
+    var nr = request.params.number
         ;
-    response.success(_getAlertDate("2013-12-12T00:00:00.000Z"
-        , userId.get("alertDaysBefore")
-        , userId.get("alertHour")
-        , userId.get("alertOnlyWorkingDays")
-    ));
+    response.success({
+        rnd: _ctcRound(nr, 2),
+        nzn: NZN(nr)
+    });
 });
