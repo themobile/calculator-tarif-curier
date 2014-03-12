@@ -1,5 +1,50 @@
 $(document).ready(function () {
 
+    $(function(){
+
+        // Bind an event to window.onhashchange that, when the hash changes, gets the
+        // hash and adds the class "selected" to any matching nav link.
+        $(window).hashchange( function(){
+            var hash = location.hash;
+
+            // Set the page title based on the hash.
+            document.title = 'Calculator comparativ tarife servicii de curierat ' +  hash.replace( /^#/, '' );
+
+
+            if (hash=='') {
+                $('#process').attr("disabled", false);
+                $('#results').text('');
+                result = '';
+                if (!$('.hiding-net').is(":visible")) $('.hiding-net').slideToggle();
+                setTimeout(function () {
+                    $('#process').text('Calculează');
+                }, 200);
+            }
+
+        });
+
+        // Since the event is only triggered when the hash changes, we need to trigger
+        // the event now, to handle the hash the page may have loaded with.
+        $(window).hashchange();
+
+    });
+
+
+    function shuffle(o){ //v1.0
+        for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+        return o;
+    };
+
+    var curiers=['sprint','fan','nemo','vip','dragonstar','posta-romana','alo','ecco','bookurier','global','otto','star','urgent','chronos','cargus']
+    var curiers_random = shuffle(curiers);
+    var curiers_random_string='| ';
+    curiers_random.map(function(item){
+        curiers_random_string=curiers_random_string + item + ' | ';
+    });
+
+    $('.listacurieri').html(curiers_random_string);
+
+
     if (typeof console == "object") {
         console.log("%cHey! How are you doing? We're glad you are curious about this site.", "color: #ED1E79; font-size: 18px; font-family: 'Helvetica-Neue', Helvetica, Arial, sans-serif;");
         console.log("This was developed in under 6 hours in a hurry, including backend, so excuse some shortcuts and variable naming :)");
@@ -51,11 +96,10 @@ $(document).ready(function () {
 
     });
 
-
     $('#sendinfo').on('submit', function (e) {
-
         //check spam
         if ($('.lamisto').val() == '') {
+            location.hash="#listing";
             $('#process').attr("disabled", true);
             if ($('.hiding-net').is(":visible")) {
                 var result = '';
@@ -93,6 +137,7 @@ $(document).ready(function () {
                             curiers = curiers + '<div class="curier_localități">Dimensiuni max: <span>' + item.InfoCmMaxColet + '</span></div>';
                             curiers = curiers + '</div>';
                         });
+                        curiers = curiers + '<a id="process2" type="button" href="#" class="ten columns"> Calculează din nou!</button>';
 
                         $('.bubblingG').toggleClass('hidden');
                         $('.hiding-net').slideToggle();
@@ -120,18 +165,15 @@ $(document).ready(function () {
                 $('#results').text('');
                 result = '';
                 $('.hiding-net').slideToggle();
+
                 setTimeout(function () {
                     $('#process').text('Calculează');
                 }, 200);
+                location.hash="";
             }
         }
-
-
         e.preventDefault();
-
     });
-
-
 });
 
 

@@ -319,7 +319,8 @@ input[type=radio].css-checkbox, input[type=checkbox].css-checkbox {
   display: none;
 }
 
-input[type=radio].css-checkbox + label.css-label, input[type=checkbox].css-checkbox + label.css-label {
+
+input[type=radio].css-checkbox + label.css-label {
   display: inline-block;
   line-height: 2em;
   padding: 0.5em 0;
@@ -341,11 +342,21 @@ input[type=radio].css-checkbox + label.css-label, input[type=checkbox].css-check
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    content: '\e605\00A0';
+    content: '\e610\00A0';
   }
 }
 
-input[type=radio].css-checkbox:checked + label.css-label, input[type=checkbox].css-checkbox:checked + label.css-label {
+
+input[type=checkbox].css-checkbox + label.css-label {
+  display: inline-block;
+  line-height: 2em;
+  padding: 0.5em 0;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  //  font-weight: 300;
+
   &::before {
     font-size: 0.8em;
     font-family: 'ctc';
@@ -358,10 +369,47 @@ input[type=radio].css-checkbox:checked + label.css-label, input[type=checkbox].c
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    content: '\e601\00A0';
+    content: '\e612\00A0';
+  }
+}
+
+input[type=radio].css-checkbox:checked + label.css-label, {
+  &::before {
+    font-size: 0.8em;
+    font-family: 'ctc';
+    color: @accentcolor;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: '\e611\00A0';
 
   }
 }
+
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+  &::before {
+    font-size: 0.8em;
+    font-family: 'ctc';
+    color: @accentcolor;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: '\e613\00A0';
+
+  }
+}
+
 
 label.css-label {
   color: rgba(0, 0, 0, 0.70);
@@ -398,6 +446,11 @@ label.css-label {
 
 }
 
+.listacurieri {
+  font-size:0.8em;
+  padding:0 0 1em 0 !important;
+}
+
 fieldset {
   margin-top: 1em;
   border-bottom: 1px solid rgba(237, 30, 121, 0.2);
@@ -405,7 +458,7 @@ fieldset {
 }
 
 form {
-  margin-top: 2em !important;
+//  margin-top: 2em;
 }
 
 #results {
@@ -484,7 +537,15 @@ label[for=confirmare], label[for=returdoc] {
   font-weight: 600;
 }
 
-#process {
+.links {
+  margin:2em 0 !important;
+  text-align: center;
+  line-height:3em;
+
+}
+
+
+#process,#process2 {
   border: none;
   background: @accentcolor;
   line-height: 2em;
@@ -497,9 +558,11 @@ label[for=confirmare], label[for=returdoc] {
   outline: none;
 }
 
+
+
 #footer {
   border-top: 1px solid fadeout(@accentcolor, 80%);
-  margin: 2em 0 0 0;
+  margin: 2em 0 0 10px;
   text-align: center;
   display:inline-block;
 
@@ -575,7 +638,7 @@ label[for=confirmare], label[for=returdoc] {
   }
 
   .curier_name {
-    background: desaturate(darken(@accentcolor,10%),10%);
+    background: rgba(255, 23, 124, 0.49);
     font-weight: 600;
     color: white;
     line-height: 2em;
@@ -640,33 +703,25 @@ div.curier_name > span {
 }
 
 #facebook-comments {
-  margin: 2em 0 2em 10px;
-  display:table;
+  margin: 2em 0 2em 20px;
+  display:inline-block;
   position:relative;
-
-  .fb-comments {
-
-    > span {
-      width: 100% !important;
-
-      > iframe {
-        width: 100% !important;
-
-      }
-    }
-
-  }
 
 }
 
-
+.fb-comments, .fb-comments * {
+  width:100% !important;
+}
 .fb-like {
-  text-align: center;
-  width: 100%;
+  width: 50%;
+}
+
+#___plusone_0 {
+  width:50% ;
 }
 
 .adsbygoogle {
-  display: block;
+  display: block !important;
   width: 320px;
   height: 50px;
   margin-top: 1em;
@@ -675,6 +730,13 @@ div.curier_name > span {
   margin-left: -160px;
   margin-bottom: 2em;
 }
+.like-buttons {
+  text-align: center;
+  width:100%;
+  line-height:10px;
+}
+
+
 
 .lamisto {
   display:none;
